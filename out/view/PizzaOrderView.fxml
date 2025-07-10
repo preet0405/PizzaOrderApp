@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.PizzaController" spacing="10">
+    <HBox spacing="10">
+        <Label text="Name:"/>
+        <TextField fx:id="tfName"/>
+        <Label text="Mobile:"/>
+        <TextField fx:id="tfMobile"/>
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Size:"/>
+        <ComboBox fx:id="cbSize"/>
+        <Label text="Toppings:"/>
+        <Spinner fx:id="spToppings"/>
+        <Button text="Add Order" onAction="#handleAddOrder"/>
+    </HBox>
+    <TableView fx:id="ordersTable" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="40"/>
+            <TableColumn fx:id="colName" text="Customer" prefWidth="100"/>
+            <TableColumn fx:id="colMobile" text="Mobile" prefWidth="100"/>
+            <TableColumn fx:id="colSize" text="Size" prefWidth="60"/>
+            <TableColumn fx:id="colToppings" text="Toppings" prefWidth="60"/>
+            <TableColumn fx:id="colTotal" text="Total Bill" prefWidth="80"/>
+        </columns>
+    </TableView>
+</VBox>
+
+
+
+
+
+
